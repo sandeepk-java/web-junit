@@ -1,8 +1,5 @@
 package com.example.demo.config;
 
-import java.util.Arrays;
-import java.util.HashSet;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,6 +16,8 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.example.demo"))
+                //.apis(RequestHandlerSelectors.any())
+                //.paths(PathSelectors.any())
                 .build();
               /*  .consumes(new HashSet<String>(Arrays.asList("application/json")))
                 .produces(new HashSet<String>(Arrays.asList("application/json")));*/
